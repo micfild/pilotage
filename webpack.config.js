@@ -59,7 +59,9 @@ Encore
     .addStyleEntry('style','./assets/scss/index.scss')
 
     // uncomment if you use TypeScript
-    //.enableTypeScriptLoader()
+    .enableTypeScriptLoader()
+
+    .addEntry('script', './assets/ts/index.ts')
 
     // uncomment to get integrity="..." attributes on your script & link tags
     // requires WebpackEncoreBundle 1.4 or higher
