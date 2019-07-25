@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Tag{% endblock %}
+{% block title %}Edit {{ tag.name }}{% endblock %}
 
 {% block body %}
-    <h1>Edit Tag</h1>
+    <h1>Edit {{ tag.name }}</h1>
 
     {{ include('tag/_form.html.twig', {'button_label': 'Update'}) }}
 

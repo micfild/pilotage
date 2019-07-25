@@ -1,3 +1,50 @@
+header:
+    title:
+        label: "Circuit ADREC"
+    menu:
+        item:
+            tag:
+                label: "Tags"
+            bike:
+                label: "Motos"
+            reservation:
+                label: "Réservations"
+            customer:
+                label: "Client"
+            bikeOwner:
+                label: "Propriétaire"
+
 home:
     title:
         label: "Bienvenue site ADREC"
+
+tags:
+    new:
+        title:
+            label: "Nouveau Tag !!"
+    form:
+        name:
+            label: "Nom"
+
+bikes:
+    form:
+        brand:
+            label: "Marque"
+        model:
+            label: "Modèle"
+        matriculation:
+            label: "Numero d'immatriculation"
+        color:
+            label: "Couleur"
+        power:
+            lable: "Puissance"
+        km:
+            label: "Kilometrage"
+        productionyear:
+            label: "Année modèle"
+        status:
+            label: "Statut / Disponibilité"
+        tags:
+            label: "Tags"
+        bikeowner:
+            label: "Propriétaire"

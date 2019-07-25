@@ -2,27 +2,28 @@
 
 namespace App\Form;
 
-use App\Entity\Tag;
+use App\Entity\Reservation;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class TagType extends AbstractType
+class ReservationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', null, [
-                'label' => 'tags.form.name.label',
-            ])
+            ->add('trackDate')
+            ->add('createdAt')
+            ->add('status')
+            ->add('bike')
+            ->add('customer')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Tag::class,
-            'translation_domain' => 'messages'
+            'data_class' => Reservation::class,
         ]);
     }
 }
