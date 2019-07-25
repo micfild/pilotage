@@ -18,7 +18,6 @@
                 <th>Phone</th>
                 <th>BirthDate</th>
                 <th>CreatedAt</th>
-                <th>Id</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -34,8 +33,7 @@
                 <td>{{ bike_owner.mail }}</td>
                 <td>{{ bike_owner.phone }}</td>
                 <td>{{ bike_owner.birthDate ? bike_owner.birthDate|date('Y-m-d') : '' }}</td>
-                <td>{{ bike_owner.createdAt ? bike_owner.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ bike_owner.id }}</td>
+                <td>{{ bike_owner.createdAt ? bike_owner.createdAt|date('Y-m-d') : '' }}</td>
                 <td>
                     <a href="{{ path('bike_owner_show', {'id': bike_owner.id}) }}">show</a>
                     <a href="{{ path('bike_owner_edit', {'id': bike_owner.id}) }}">edit</a>
