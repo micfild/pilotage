@@ -80,4 +80,9 @@ class Customer extends Person
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->getFirstName() . " " . $this->getLastName();
+    }
 }

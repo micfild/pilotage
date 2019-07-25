@@ -4,6 +4,8 @@ namespace App\Form;
 
 use App\Entity\Customer;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -12,7 +14,13 @@ class CustomerType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('gender')
+            ->add('gender', ChoiceType::class, [
+                'choices' => [
+                    'person.gender.male.label' => 1,
+                    'person.gender.female.label' => 2,
+                    'person.gender.unknow.label' => 3,
+                ]
+            ])
             ->add('firstName')
             ->add('lastName')
             ->add('address')
@@ -20,8 +28,11 @@ class CustomerType extends AbstractType
             ->add('city')
             ->add('mail')
             ->add('phone')
-            ->add('birthDate')
-            ->add('createdAt')
+            ->add('birthDate', DateType::class, [
+                'widget' => 'choice',
+                'format' => 'M-d-y',
+                'years' => range('1950', date('Y'),1),
+            ])
             ->add('password')
         ;
     }

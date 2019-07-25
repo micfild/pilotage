@@ -17,6 +17,7 @@
                 <th>Km</th>
                 <th>ProductionYear</th>
                 <th>Status</th>
+                <th>Owner</th>
                 <th>CreatedAt</th>
                 <th>actions</th>
             </tr>
@@ -33,6 +34,7 @@
                 <td>{{ bike.km }}</td>
                 <td>{{ bike.productionYear ? bike.productionYear|date('Y-m-d') : '' }}</td>
                 <td>{{ bike.status }}</td>
+                <td>{{ bike.bikeOwner }}</td>
                 <td>{{ bike.createdAt ? bike.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
                     <a href="{{ path('bike_show', {'id': bike.id}) }}">show</a>

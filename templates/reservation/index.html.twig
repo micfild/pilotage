@@ -12,6 +12,8 @@
                 <th>TrackDate</th>
                 <th>CreatedAt</th>
                 <th>Status</th>
+                <th>Moto</th>
+                <th>Customer</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -22,6 +24,8 @@
                 <td>{{ reservation.trackDate ? reservation.trackDate|date('Y-m-d') : '' }}</td>
                 <td>{{ reservation.createdAt ? reservation.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ reservation.status }}</td>
+                <td>{{ reservation.bike }}</td>
+                <td>{{ reservation.customer }}</td>
                 <td>
                     <a href="{{ path('reservation_show', {'id': reservation.id}) }}">show</a>
                     <a href="{{ path('reservation_edit', {'id': reservation.id}) }}">edit</a>

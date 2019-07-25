@@ -48,3 +48,21 @@ bikes:
             label: "Tags"
         bikeowner:
             label: "Propriétaire"
+
+person:
+    gender:
+        male:
+            label: "Homme"
+        female:
+            label: "Femme"
+        unknow:
+            label: "PasChure"
+
+reservation:
+    type:
+        pending:
+            label: "En cours"
+        validated:
+            label: "Validé"
+        done:
+            label: "effectué"
