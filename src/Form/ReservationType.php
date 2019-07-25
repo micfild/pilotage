@@ -16,16 +16,8 @@ class ReservationType extends AbstractType
         $builder
             ->add('trackDate', DateType::class, [
                 'widget' => 'choice',
-                'format' => 'M-d-y',
+                'format' => 'd MMMM y',
                 'years' => range(date('Y'), date('Y')+1,1),
-            ])
-            ->add('createdAt')
-            ->add('status', ChoiceType::class, [
-                'choices' => [
-                    'reservation.type.pending.label' => 1,
-                    'reservation.type.validated.label' => 2,
-                    'reservation.type.done.label' => 3,
-                ]
             ])
             ->add('bike')
             ->add('customer')

@@ -21,8 +21,8 @@
         {% for reservation in reservations %}
             <tr>
                 <td>{{ reservation.id }}</td>
-                <td>{{ reservation.trackDate ? reservation.trackDate|date('Y-m-d') : '' }}</td>
-                <td>{{ reservation.createdAt ? reservation.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ reservation.trackDate ? reservation.trackDate|date('d-m-Y') : '' }}</td>
+                <td>{{ reservation.createdAt ? reservation.createdAt|date('d-m-Y H:i:s') : '' }}</td>
                 <td>{{ reservation.status }}</td>
                 <td>{{ reservation.bike }}</td>
                 <td>{{ reservation.customer }}</td>
